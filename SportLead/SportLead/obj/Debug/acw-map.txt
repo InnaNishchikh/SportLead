@@ -1,0 +1,4 @@
+SportLead.MainActivity, SportLead;md50b8259f06ad4ac5189255f22b63235bb.MainActivity
+SportLead.MainActivity, SportLead, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50b8259f06ad4ac5189255f22b63235bb.MainActivity
+SportLead.MainActivity;md50b8259f06ad4ac5189255f22b63235bb.MainActivity
+sportlead.MainActivity;md50b8259f06ad4ac5189255f22b63235bb.MainActivity
