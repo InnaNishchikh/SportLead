@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/favorites"
+      android:icon="@drawable/star"
+      android:title="Избранное"></item>
+    <item
+  android:id="@+id/my_Events"
+  android:title="Мои мероприятия"></item>
+    <item
+  android:id="@+id/search"
+  android:title="Поиск"></item>
+    <item
+  android:id="@+id/settings"
+  android:title="Настройки"></item>
+  </group>
+</menu>
