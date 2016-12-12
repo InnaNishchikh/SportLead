@@ -13,9 +13,25 @@ using Java.IO;
 
 namespace SportLead
 {
-    public class Event : ISerializable
+    public class Event
     {
         public string Name { get; set; }
+
+        public string City { get; set; }
+
+        public string Place { get; set; }
+
+        public string Address { get; set; }
+
+        // TODO какой тип?
+        public DateTime Date { get; set; }
+
+        // TODO какой тип?
+        public TimeSpan Time { get; set; }
+
+        public string Description { get; set; }
+
+        public User Creator { get; set; }
 
         public string Info { get; set; }
 
@@ -24,28 +40,16 @@ namespace SportLead
             Name = name;
             Info = info;
         }
-
-        //TODO добавить метод сравнения Equals или что-то подобное. для метода List.Contains        
+  
         public override bool Equals(object obj)
         {
             Event item = obj as Event;
             return (Name == item.Name && Info == item.Info);
         }
 
-
-        #region ISerializable
-        public IntPtr Handle
+        public override int GetHashCode()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            return base.GetHashCode();
         }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
     }
 }

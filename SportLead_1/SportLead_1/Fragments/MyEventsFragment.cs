@@ -13,13 +13,15 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using SportLead_1.Helpers;
 using DesignLibrary.Helpers;
+using SportLead;
+using Android.Support.Design.Widget;
 
 namespace SportLead_1.Fragments
 {
     public class MyEventsFragment : Android.Support.V4.App.Fragment, IFragment
     {
         public Application App { get; set; }
-
+        public MainActivity MainActivity { get; set; }
         public string Title { get { return "ћои меропри€ти€"; } }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -34,40 +36,83 @@ namespace SportLead_1.Fragments
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
-            RecyclerView recyclerView = inflater.Inflate(
-                Resource.Layout.MyEventsFragment, container, false) as RecyclerView;
+            //RecyclerView recyclerView = inflater.Inflate(
+            //    Resource.Layout.MyEventsFragment, container, false) as RecyclerView;
+
+            CoordinatorLayout coord_layout = inflater.Inflate(
+                Resource.Layout.MyEventsFragment, container, false) as CoordinatorLayout;
+
+            RecyclerView recyclerView = coord_layout.FindViewById<RecyclerView>(
+                Resource.Id.recyclerview_myevents);
 
             SetUpRecyclerView(recyclerView);
 
-            return recyclerView;
+            FloatingActionButton fab = coord_layout.FindViewById<FloatingActionButton>(Resource.Id.fab);
+
+            fab.Click += (o, e) =>
+            {
+                //if (App.IsUserLogin)
+                //{
+
+                //}
+                //else
+                //{
+                // сообщение о том, что только авторизованные пользователи могут создавать меропри€ти€
+                var context = recyclerView.Context;
+                string title = "¬ы не авторизованы";
+                string message = "¬ойдите в систему, чтобы иметь возможность создавать меропри€ти€";
+                string button1String = "войти";
+                string button2String = "не сейчас";
+
+                var ad = new AlertDialog.Builder(context);
+                ad.SetTitle(title);  // заголовок
+                ad.SetMessage(message); // сообщение
+
+                ad.SetPositiveButton(button1String, new ClickListeners.OnPositiveClickListener());
+
+                ad.SetNegativeButton(button2String, new ClickListeners.OnNegativeClickListener());
+                ad.SetCancelable(true);
+                ad.Show();
+                //        ad.SetOnCancelListener(new OnCancelListener()
+                //{
+                //            public void onCancel(DialogInterface dialog)
+                //{
+                //    Toast.makeText(context, "¬ы ничего не выбрали",
+                //            Toast.LENGTH_LONG).show();
+                //}
+                //        });
+
+
+                //}
+            };
+            return coord_layout;
         }
 
         private void SetUpRecyclerView(RecyclerView recyclerView)
         {
+            List<Event> values = new List<Event>();
             // если пользователь авторизован
             if (App.IsUserLogin)
             {
-                var values = App.User.MyEvents;
-
-                recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
-                recyclerView.SetAdapter(new SimpleEventRecyclerViewAdapter(recyclerView.Context, values, Activity.Resources, App));
-
-                recyclerView.SetItemClickListener((rv, position, view) =>
-                {
-                    //An item has been clicked
-                    Context context = view.Context;
-                    Intent intent = new Intent(context, typeof(EventActivity));
-                    intent.PutExtra(EventActivity.eventStr, values[position].Name);
-
-                    context.StartActivity(intent);
-                });
-
+                values = App.User.OwnEvents;
             }
-            else
+
+            recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
+            recyclerView.SetAdapter(new EventRecyclerViewAdapter(recyclerView.Context, values, Activity.Resources));
+
+            recyclerView.SetItemClickListener((rv, position, view) =>
             {
-                // TODO сообщение о том, что нужно авторизоватьс€
-                // ј именно: Ќастройки -> ввести логин и пароль -> сохранить изменени€
-            }
+                //An item has been clicked
+                Context context = view.Context;
+                Intent intent = new Intent(context, typeof(EventActivity));
+                intent.PutExtra(EventActivity.eventStr, values[position].Name);
+
+                context.StartActivity(intent);
+            });
+
+
         }
     }
+
+
 }

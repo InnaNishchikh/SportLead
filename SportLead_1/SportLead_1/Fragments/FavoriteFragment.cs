@@ -23,7 +23,7 @@ namespace SportLead_1.Fragments
     public class FavoriteFragment : Android.Support.V4.App.Fragment, IFragment
     {
         public Application App { get; set; }
-
+        public MainActivity MainActivity { get; set; }
         public string Title { get { return "Избранное"; } }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -48,30 +48,25 @@ namespace SportLead_1.Fragments
 
         private void SetUpRecyclerView(RecyclerView recyclerView)
         {
+            List<Event> values = new List<Event>();
             // если пользователь авторизован
             if (App.IsUserLogin)
             {
-                var values = App.User.FavoriteEvents;
-
-                recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
-                recyclerView.SetAdapter(new FavEventRecyclerViewAdapter(recyclerView.Context, values, Activity.Resources, App));
-
-                recyclerView.SetItemClickListener((rv, position, view) =>
-                {
-                    //An item has been clicked
-                    Context context = view.Context;
-                    Intent intent = new Intent(context, typeof(EventActivity));
-                    intent.PutExtra(EventActivity.eventStr, values[position].Name);
-
-                    context.StartActivity(intent);
-                });
-
+                values = App.User.FavoriteEvents;
             }
-            else
+            recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
+            recyclerView.SetAdapter(new FavEventRecyclerViewAdapter(
+                recyclerView.Context, values, Activity.Resources, App));
+
+            recyclerView.SetItemClickListener((rv, position, view) =>
             {
-                // TODO сообщение о том, что нужно авторизоваться
-                // А именно: Настройки -> ввести логин и пароль -> сохранить изменения
-            }
+                //An item has been clicked
+                Context context = view.Context;
+                Intent intent = new Intent(context, typeof(EventActivity));
+                intent.PutExtra(EventActivity.eventStr, values[position].Name);
+
+                context.StartActivity(intent);
+            }); 
         }
     }
 }

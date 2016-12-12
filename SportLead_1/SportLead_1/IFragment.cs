@@ -12,9 +12,10 @@ using Android.Widget;
 
 namespace SportLead_1
 {
-    interface IFragment
+    public interface IFragment
     {
         string Title { get; }
         Application App { get; set; }
+        MainActivity MainActivity { get; set; }
     }
 }

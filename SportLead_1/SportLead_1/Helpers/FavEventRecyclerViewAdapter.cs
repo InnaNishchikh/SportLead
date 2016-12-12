@@ -24,7 +24,9 @@ namespace SportLead_1.Helpers
         private List<Event> mValues;
         Resources mResource;
         private Dictionary<int, int> mCalculatedSizes;
-         
+
+        private int fake_position = -1;
+
         public FavEventRecyclerViewAdapter(Context context, List<Event> items, Resources res, Application app)
         {
             this.app = app;
@@ -57,10 +59,11 @@ namespace SportLead_1.Helpers
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.List_Item, parent, false);
+            View view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.List_Item_withFab, parent, false);
             view.SetBackgroundResource(mBackground);
+            fake_position++;
 
-            return new FavEventViewHolder(view);
+            return new FavEventViewHolder(view, app, fake_position);
         }
     }
 }

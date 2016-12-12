@@ -30,13 +30,13 @@ namespace SportLead_1
 
             //Event current_event = Intent.GetSerializableExtra(eventStr) as Event;
             string name = Intent.GetStringExtra(eventStr);
-            TextView text = FindViewById<TextView>(Resource.Id.event_message);
+            //TextView text = FindViewById<TextView>(Resource.Id.event_message);
 
-            text.Text += "  " + name;
+            //text.Text += "  " + name;
 
-            SupportToolbar toolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
-            SetSupportActionBar(toolBar);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //SupportToolbar toolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
+            //SetSupportActionBar(toolBar);
+            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

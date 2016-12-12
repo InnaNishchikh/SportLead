@@ -17,7 +17,7 @@ namespace SportLead_1.Fragments
     public class SettingsFragment : Android.Support.V4.App.Fragment, IFragment
     {
         public Application App { get; set; }
-
+        public MainActivity MainActivity { get; set; }
         public string Title { get { return "Настройки"; } }
         
         FrameLayout layout;
@@ -79,8 +79,12 @@ namespace SportLead_1.Fragments
             {
                 if (App.IsUserLogin)
                 {
+                    // Проверить на наличие пользователя с таким логином
                     App.User.ChangeLogin(login);
                     App.User.ChangePassword(password);
+
+                    SharedPreferences.SaveUser(login, password);
+
                     Toast toast = Toast.MakeText(layout.Context, "Изменения сохранены", ToastLength.Short);
                     toast.Show();
                 }

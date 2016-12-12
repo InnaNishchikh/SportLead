@@ -55,6 +55,8 @@ namespace SportLead_1.Helpers
             simpleHolder.mBoundString = current_event;
             simpleHolder.mTxtView_EventName.Text = current_event.Name;
             simpleHolder.mTxtView_Info.Text = current_event.Info;
+
+            // TODO здесь написать checkbox
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

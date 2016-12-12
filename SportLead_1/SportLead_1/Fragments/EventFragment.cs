@@ -22,7 +22,7 @@ namespace SportLead_1.Fragments
     public class EventFragment : Android.Support.V4.App.Fragment, IFragment
     {
         public Application App { get; set; }
-
+        public MainActivity MainActivity { get; set; }
         public string Title { get { return "Мероприятия"; } }
 
         public override void OnCreate(Bundle savedInstanceState)

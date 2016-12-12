@@ -19,8 +19,68 @@ namespace SportLead_1
 
         public List<Event> Events { get; protected set; }
 
+
+
         public Application()
         {
+            User = new User("", "");
+            Events = new List<Event>();
+            IsUserLogin = false;
+        }
+
+        /// <summary>
+        /// Авторизован ли пользователь
+        /// </summary>
+        public bool IsUserLogin { get; protected set; }
+
+        public void SetUser(User user)
+        {
+            User = user;
+            IsUserLogin = true;
+        }
+
+        /// <summary>
+        /// Авторизовать пользователя
+        /// TODO подумать о реализации
+        /// </summary>
+        public void LoginUser()
+        {
+            IsUserLogin = true;
+        }
+
+        public void AddFavorite(int position)
+        {
+            try
+            {
+                User.AddFavoriteEvent(Events[position]);
+            }
+            catch { }
+        }
+
+        public void RemoveFavorite(int position)
+        {
+            try
+            {
+                User.FavoriteEvents.RemoveAt(position);
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// Загрузить информацию с сервера
+        /// </summary>
+        /// <returns></returns>
+        public bool LoadData()
+        {
+            //string login = SharedPreferences.GetUserName();
+            //string password = SharedPreferences.GetPassword();
+
+            //if (!string.IsNullOrEmpty(login) && password != null)
+            //{
+            //    SetUser(new User(login, password));
+            //    LoginUser();
+            //}
+
             Events = new List<Event>() {
                 new Event("Футбол", "Москва, 16 января 2017"),
                 new Event("Баскетбол", "Новосибирск, 17 января 2017"),
@@ -47,36 +107,9 @@ namespace SportLead_1
                 new Event("Бег", "Бостон, 26 февраля 2017"),
                 new Event("Фигурное катание", "Ванкувер, 27 февраля 2017")
             };
-        }
 
-        /// <summary>
-        /// Авторизован ли пользователь
-        /// </summary>
-        public bool IsUserLogin { get; protected set; }
 
-        public void SetUser (User user)
-        {
-            User = user;
-            IsUserLogin = false;
-        }   
-
-        /// <summary>
-        /// Авторизовать пользователя
-        /// TODO подумать о реализации
-        /// </summary>
-        public void LoginUser()
-        {
-            IsUserLogin = true;
-        }
-
-        public void AddFavorite(int position)
-        {
-            User.FavoriteEvents.Add(Events[position]);
-        }
-
-        public void RemoveFavorite(int position)
-        {
-            User.FavoriteEvents.Remove(Events[position]);
+            return true;
         }
     }
 }

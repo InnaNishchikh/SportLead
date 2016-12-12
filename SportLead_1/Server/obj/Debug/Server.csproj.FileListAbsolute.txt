@@ -1,0 +1,5 @@
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\Server.pdb
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.pdb
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\Server.exe
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.exe

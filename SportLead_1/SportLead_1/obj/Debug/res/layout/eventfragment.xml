@@ -1,18 +1,1 @@
-<android.support.v7.widget.RecyclerView android:id="@+id/recyclerview_events" android:layout_width="match_parent" android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android" /><!--<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFAFA"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_width="match_parent">
-
-  <TextView
-    android:text="Здесь будут все события"
-    android:textColor="#228B22"
-    android:textSize="50sp"
-    android:textStyle="bold"
-    android:gravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
-  
-</FrameLayout>-->
+<android.support.v7.widget.RecyclerView android:id="@+id/recyclerview_events" android:layout_width="match_parent" android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android" />
