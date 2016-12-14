@@ -8,5 +8,5 @@ C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\android\bin\S
 C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\res\values\strings.xml
 C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\R.cs.flag
 C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\uploadflags.txt
-C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\SportLead.dll.mdb
 C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\bin\Debug\SportLead.dll.mdb
+C:\Users\Арина\Documents\SP_1\SportLead_1\SportLead\obj\Debug\SportLead.csprojResolveAssemblyReference.cache

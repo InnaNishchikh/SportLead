@@ -2175,8 +2175,8 @@ namespace SportLead_1
 			// aapt resource value: 0x7f06008a
 			public const int cancel_action = 2131099786;
 			
-			// aapt resource value: 0x7f06007a
-			public const int cardview = 2131099770;
+			// aapt resource value: 0x7f06007b
+			public const int cardview = 2131099771;
 			
 			// aapt resource value: 0x7f06002c
 			public const int center = 2131099692;
@@ -2193,8 +2193,8 @@ namespace SportLead_1
 			// aapt resource value: 0x7f060090
 			public const int chronometer = 2131099792;
 			
-			// aapt resource value: 0x7f06007c
-			public const int click = 2131099772;
+			// aapt resource value: 0x7f060078
+			public const int click = 2131099768;
 			
 			// aapt resource value: 0x7f060035
 			public const int clip_horizontal = 2131099701;
@@ -2274,8 +2274,8 @@ namespace SportLead_1
 			// aapt resource value: 0x7f06007d
 			public const int event_info = 2131099773;
 			
-			// aapt resource value: 0x7f06007b
-			public const int event_name = 2131099771;
+			// aapt resource value: 0x7f06007c
+			public const int event_name = 2131099772;
 			
 			// aapt resource value: 0x7f0600a0
 			public const int events = 2131099808;
@@ -2418,14 +2418,14 @@ namespace SportLead_1
 			// aapt resource value: 0x7f060057
 			public const int radio = 2131099735;
 			
-			// aapt resource value: 0x7f060079
-			public const int recyclerview = 2131099769;
+			// aapt resource value: 0x7f06007a
+			public const int recyclerview = 2131099770;
 			
 			// aapt resource value: 0x7f060077
 			public const int recyclerview1 = 2131099767;
 			
-			// aapt resource value: 0x7f060078
-			public const int recyclerview_events = 2131099768;
+			// aapt resource value: 0x7f060079
+			public const int recyclerview_events = 2131099769;
 			
 			// aapt resource value: 0x7f060086
 			public const int recyclerview_myevents = 2131099782;

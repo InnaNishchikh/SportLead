@@ -2731,13 +2731,13 @@ containing a value of this type.
         public static final int bottom=0x7f060024;
         public static final int buttonPanel=0x7f060047;
         public static final int cancel_action=0x7f06008a;
-        public static final int cardview=0x7f06007a;
+        public static final int cardview=0x7f06007b;
         public static final int center=0x7f06002c;
         public static final int center_horizontal=0x7f06002d;
         public static final int center_vertical=0x7f06002e;
         public static final int checkbox=0x7f060055;
         public static final int chronometer=0x7f060090;
-        public static final int click=0x7f06007c;
+        public static final int click=0x7f060078;
         public static final int clip_horizontal=0x7f060035;
         public static final int clip_vertical=0x7f060036;
         public static final int collapseActionView=0x7f060020;
@@ -2764,7 +2764,7 @@ containing a value of this type.
         public static final int enterAlwaysCollapsed=0x7f060027;
         public static final int enterButton=0x7f060081;
         public static final int event_info=0x7f06007d;
-        public static final int event_name=0x7f06007b;
+        public static final int event_name=0x7f06007c;
         public static final int events=0x7f0600a0;
         public static final int exit=0x7f0600a3;
         public static final int exitUntilCollapsed=0x7f060028;
@@ -2812,9 +2812,9 @@ containing a value of this type.
         public static final int progress_circular=0x7f060006;
         public static final int progress_horizontal=0x7f060007;
         public static final int radio=0x7f060057;
-        public static final int recyclerview=0x7f060079;
+        public static final int recyclerview=0x7f06007a;
         public static final int recyclerview1=0x7f060077;
-        public static final int recyclerview_events=0x7f060078;
+        public static final int recyclerview_events=0x7f060079;
         public static final int recyclerview_myevents=0x7f060086;
         public static final int right=0x7f060031;
         public static final int saveSettings=0x7f060099;

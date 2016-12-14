@@ -10,15 +10,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.IO;
+using System.Runtime.Serialization.Json;
 
 namespace SportLead
 {
-    public class Event
+    public class Event 
     {
         public string Name { get; set; }
-
+        
         public string City { get; set; }
-
+        
         public string Place { get; set; }
 
         public string Address { get; set; }

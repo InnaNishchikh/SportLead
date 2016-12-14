@@ -3,3 +3,7 @@ C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.csprojRes
 C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.pdb
 C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\Server.exe
 C:\Users\Арина\Documents\SP_1\SportLead_1\Server\obj\Debug\Server.exe
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\SportLead.dll
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\SportLead.pdb
+C:\Users\Арина\Documents\SP_1\SportLead_1\Server\bin\Debug\Newtonsoft.Json.xml
